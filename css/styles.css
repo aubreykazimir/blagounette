@@ -11028,3 +11028,19 @@ p {
 .address strong {
   font-size: 1.2rem;
 }
+
+#facebook{
+  height: 10%;
+  width: 10%;
+}
+
+#instagram{
+  height: 10%;
+  width: 8%;
+}
+
+#tiktok{
+  height: 10%;
+  width: 8%;
+}
+

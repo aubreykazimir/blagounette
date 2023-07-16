@@ -1,10 +1,10 @@
 [
     {
-        "image": "",
-        "articleName":"nomarticle",
-        "refArticle":"réfArticle",
-        "description":"descriptionarticle",
-        "lien":"lien amazon"
+        "image": "../assets/img/adj-mug.jpg",
+        "articleName":"Mug Bonne humeur - grossier",
+        "refArticle":"mugAZ01",
+        "description":"Ce mug est parfait pour envoyer bouler gentillement vos collègues au boulot.",
+        "lien":"https://www.amazon.fr/quotedazur-Mug-Bonne-Humeur-Gueule/dp/B09BZPTX3R/ref=sr_1_6?crid=3DIMVYH0ZH6EO&keywords=mug&qid=1689515468&sprefix=%2Caps%2C62&sr=8-6"
     },
     {
         "image": "urlimage",

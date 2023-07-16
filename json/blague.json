@@ -1,49 +1,49 @@
 [
     {
         "titre": "",
-        "catégorie": "",
+        "catégorie": "Blague sur les blondes",
         "restriction": false,
         "contenu": ""
     },
     {
         "titre": "",
-        "catégorie": "",
+        "catégorie": "Jeux de mots",
         "restriction": false,
         "contenu": ""
     },
     {
         "titre": "",
-        "catégorie": "",
+        "catégorie": "Blague de Toto",
         "restriction": false,
         "contenu": ""
     },
     {
         "titre": "",
-        "catégorie": "",
+        "catégorie": "Blague Carambar",
         "restriction": false,
         "contenu": ""
     },
     {
         "titre": "",
-        "catégorie": "",
+        "catégorie": "Blague raciste",
+        "restriction": true,
+        "contenu": ""
+    },
+    {
+        "titre": "",
+        "catégorie": "Blague noire",
+        "restriction": true,
+        "contenu": ""
+    },
+    {
+        "titre": "",
+        "catégorie": "Blague sur les belges",
         "restriction": false,
         "contenu": ""
     },
     {
         "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
-    },
-    {
-        "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
-    },
-    {
-        "titre": "",
-        "catégorie": "",
+        "catégorie": "Blague sur les français",
         "restriction": false,
         "contenu": ""
     },
