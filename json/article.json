@@ -1,0 +1,43 @@
+[
+    {
+        "image": "",
+        "articleName":"nomarticle",
+        "refArticle":"réfArticle",
+        "description":"descriptionarticle",
+        "lien":"lien amazon"
+    },
+    {
+        "image": "urlimage",
+        "articleName":"nomarticle",
+        "refArticle":"réfArticle",
+        "description":"descriptionarticle",
+        "lien":"lien amazon"
+    },
+    {
+        "image": "urlimage",
+        "articleName":"nomarticle",
+        "refArticle":"réfArticle",
+        "description":"descriptionarticle",
+        "lien":"lien amazon"
+    },
+    {
+        "image": "urlimage",
+        "articleName":"nomarticle",
+        "refArticle":"réfArticle",
+        "description":"descriptionarticle",
+        "lien":"lien amazon"
+    },
+    {
+        "image": "urlimage",
+        "articleName":"nomarticle",
+        "refArticle":"réfArticle",
+        "description":"descriptionarticle",
+        "lien":"lien amazon"
+    },{
+        "image": "urlimage",
+        "articleName":"nomarticle",
+        "refArticle":"réfArticle",
+        "description":"descriptionarticle",
+        "lien":"lien amazon"
+    }
+]
