@@ -49,7 +49,13 @@
     },
     {
         "titre": "",
-        "catégorie": "",
+        "catégorie": "Monsieur et madame... qui ont un fils",
+        "restriction": false,
+        "contenu": ""
+    },
+    {
+        "titre": "",
+        "catégorie": "Toc, toc, toc",
         "restriction": false,
         "contenu": ""
     },
@@ -61,25 +67,19 @@
     },
     {
         "titre": "",
-        "catégorie": "",
+        "catégorie": "Caricature",
         "restriction": false,
         "contenu": ""
     },
     {
         "titre": "",
-        "catégorie": "",
+        "catégorie": " Blague informatique",
         "restriction": false,
         "contenu": ""
     },
     {
         "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
-    },
-    {
-        "titre": "",
-        "catégorie": "",
+        "catégorie": "Blague scientifique",
         "restriction": false,
         "contenu": ""
     },

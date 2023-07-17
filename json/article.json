@@ -7,37 +7,37 @@
         "lien":"https://www.amazon.fr/quotedazur-Mug-Bonne-Humeur-Gueule/dp/B09BZPTX3R/ref=sr_1_6?crid=3DIMVYH0ZH6EO&keywords=mug&qid=1689515468&sprefix=%2Caps%2C62&sr=8-6"
     },
     {
-        "image": "urlimage",
+        "image": "../assets/img/adj-mug.jpg",
         "articleName":"nomarticle",
         "refArticle":"réfArticle",
         "description":"descriptionarticle",
-        "lien":"lien amazon"
+        "lien":"https://www.amazon.fr/CARTERIE-cadeau-message-Cest-sourire/dp/B01IHHCP8M/ref=sr_1_31?crid=39FC2BCOB9HH&keywords=mug&qid=1689578822&sprefix=%2Caps%2C66&sr=8-31"
     },
     {
-        "image": "urlimage",
+        "image": "../assets/img/adj-mug.jpg",
         "articleName":"nomarticle",
         "refArticle":"réfArticle",
         "description":"descriptionarticle",
-        "lien":"lien amazon"
+        "lien":"https://www.amazon.fr/Chat-Col%C3%A8re-Humour-Chaton-Capuche/dp/B0966TCT9K/ref=sr_1_11?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3CMC92US1YQSE&keywords=sweat+drole&qid=1689578945&sprefix=swezt+drole%2Caps%2C69&sr=8-11"
     },
     {
-        "image": "urlimage",
+        "image": "../assets/img/adj-mug.jpg",
         "articleName":"nomarticle",
         "refArticle":"réfArticle",
         "description":"descriptionarticle",
-        "lien":"lien amazon"
+        "lien":"https://www.ebay.fr/itm/203002772957?hash=item2f43e87ddd:g:jAUAAOSwZ2RezT1~&amdata=enc%3AAQAIAAAAwCjM8srUVP%2B39zoo%2BkZD273B02cT5enj84ae0UEiKWwCWhiQSQ%2BmRXyxMj6i4mb%2Be5fP4Ey93Qr9P%2BmBqG4J1wu0KmtfqFANaaeGJW5izSxPFB8yeHJ%2Fj39flbtZUsvDXEjPjiOOevxebM6m8to7g3wb49yAAh6c2RAAWuJy26rblGEX4LJReG0b2O75yB2q76xNEloYKhFsiI0k9HcFMt%2BnZefu4F%2FmVhN0nSm6H5XhtjxCeqj4BrQNLqnflYJETg%3D%3D%7Ctkp%3ABk9SR_LziqysYg"
     },
     {
-        "image": "urlimage",
+        "image": "../assets/img/adj-mug.jpg",
         "articleName":"nomarticle",
         "refArticle":"réfArticle",
         "description":"descriptionarticle",
-        "lien":"lien amazon"
+        "lien":"https://www.amazon.fr/TOSSPER-Broches-Personnalit%C3%A9-Grenouille-%C3%89pingles/dp/B09P5YCLZF/ref=sr_1_3?keywords=pins+drole&qid=1689579089&sprefix=pins+drtole%2Caps%2C68&sr=8-3"
     },{
-        "image": "urlimage",
+        "image": "../assets/img/adj-mug.jpg",
         "articleName":"nomarticle",
         "refArticle":"réfArticle",
         "description":"descriptionarticle",
-        "lien":"lien amazon"
+        "lien":"https://www.amazon.fr/%C3%89pinglette-%C3%A9pingles-Mignon-v%C3%AAtements-Chapeau/dp/B0B2L8HQT6/ref=sr_1_40?keywords=pins+drole&qid=1689579140&sprefix=pins+drtole%2Caps%2C68&sr=8-40"
     }
 ]
