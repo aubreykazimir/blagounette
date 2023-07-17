@@ -62,7 +62,7 @@
     --bs-body-font-size: 1rem;
     --bs-body-font-weight: 400;
     --bs-body-line-height: 1.5;
-    --bs-body-color: #212529;
+    --bs-body-color: #ffffff;
     --bs-body-bg: #fff;
     --bs-border-width: 1px;
     --bs-border-style: solid;
@@ -98,11 +98,11 @@ body {
     font-size: var(--bs-body-font-size);
     font-weight: var(--bs-body-font-weight);
     line-height: var(--bs-body-line-height);
-    color: var(--bs-body-color);
+    color: white;
     text-align: var(--bs-body-text-align);
-    background-color: var(--bs-body-bg);
+    background-color: rgb(124, 84, 56);
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 hr {
@@ -353,7 +353,7 @@ table {
 caption {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    color: #6c757d;
+    color: #e6e9eb;
     text-align: left;
 }
 
@@ -654,7 +654,7 @@ progress {
 
 .img-thumbnail {
     padding: 0.25rem;
-    background-color: #fff;
+    background-color: white;
     border: 1px solid var(--bs-border-color);
     border-radius: 0.375rem;
     max-width: 100%;
@@ -3707,7 +3707,7 @@ fieldset:disabled .btn {
     --bs-dropdown-link-disabled-color: #adb5bd;
     --bs-dropdown-item-padding-x: 1rem;
     --bs-dropdown-item-padding-y: 0.25rem;
-    --bs-dropdown-header-color: #6c757d;
+    --bs-dropdown-header-color: #584936;
     --bs-dropdown-header-padding-x: 1rem;
     --bs-dropdown-header-padding-y: 0.5rem;
     position: absolute;
@@ -12608,3 +12608,15 @@ fieldset:disabled .btn {
         display: none !important;
     }
 }
+
+#facebook{
+    width: 10%;
+  }
+  
+  #instagram{
+    width: 8%;
+  }
+  
+  #tiktok{
+    width: 8%;
+  }
