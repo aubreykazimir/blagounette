@@ -203,7 +203,7 @@ const controleurBlagues = {
     const selectElement = document.getElementById("categorieSelect");
     const categorieSelectionnee = selectElement.value;
     const blaguesFiltrees = modeleBlagues.donneesBlagues.filter((blague) => {
-      if (categorieSelectionnee === "toutes") {
+      if (categorieSelectionnee === "Toutes") {
         return (
           !blague.restreint || (blague.restreint && modeleBlagues.estMajeur())
         );
@@ -221,7 +221,7 @@ const controleurBlagues = {
   },
 
   recupererCategories: function () {
-    const categories = ["toutes"];
+    const categories = ["Toutes"];
     modeleBlagues.donneesBlagues.forEach((blague) => {
       if (blague.categorie && !categories.includes(blague.categorie)) {
         categories.push(blague.categorie);
