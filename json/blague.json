@@ -118,5 +118,296 @@
       "contenu": "Qu'est-ce qu'un chat architecte ? Un félin qui conçoit des plans pour des griffes-tures impressionnantes !",
       "categorie": "Animaux",
       "restreint": false
+    },
+{
+        "titre": "",
+        "catégorie": "Blonde",
+        "restriction": false,
+        "contenu": "Une blonde entre dans une bibliothèque: – Bonjour je voudrais un coca et des frites – Mais enfin madame, vous êtes dans une bibliothèque. (En chuchotant) – Oups excusez-moi… Un coca et des frites s’il vous plait."
+    },
+    {
+        "titre": "",
+        "catégorie": "Jeux de mots",
+        "restriction": false,
+        "contenu": "C’est Claire ?! Non c’est sombre"
+    },
+    {
+        "titre": "",
+        "catégorie": "Toto",
+        "restriction": false,
+        "contenu": "C’est l’histoire de la maîtresse qui demande à Toto : « Récite-moi le verbe marcher au présent. » Toto répond « Je…marche…tu…tu…marches… », mais la maîtresse le presse, allez, plus vite Toto ! Ce à quoi il répond « Euh…je cours euh…tu cours il court… »"
+    },
+    {
+        "titre": "",
+        "catégorie": "Carambar",
+        "restriction": false,
+        "contenu": "C'est l'histoire de 2 grains de sable qui arrivent à la plage : « Putain, c’est blindé aujourd’hui… »"
+    },
+  
+    {
+        "titre": "",
+        "catégorie": "Nationalité",
+        "restriction": false,
+        "contenu": "Comment tu fais tourner un belge en rond ? Tu le mets dans une pièce ronde et tu lui dis qu’il y a un cornet de frite dans un coin"
+    },
+    {
+        "titre": "",
+        "catégorie": "Nationalité",
+        "restriction": false,
+        "contenu": "Comment appelle-t-on un Français qui meurt en protégeant son pays ? Aucune idée, cela ne s’est jamais produit."
+    },
+    {
+        "titre": "",
+        "catégorie": "Monsieur et madame... qui ont un fils",
+        "restriction": false,
+        "contenu": "Monsieur et Madame Gaulo ont un fils. Comment s'appelle-t-il ? 'Terry'"
+    },
+    {
+        "titre": "",
+        "catégorie": "Toc, toc, toc",
+        "restriction": false,
+        "contenu": "Toc toc toc, qui est là ? Emma. -Emma qui ? Emma Carenna"
+    },
+    {
+        "titre": "",
+        "catégorie": "Blagues sur les animaux",
+        "restriction": false,
+        "contenu": "Quel est le crustacé le plus léger de la mer ? La palourde."
+    },
+    {
+        "titre": "",
+        "catégorie": "Classique",
+        "restriction": false,
+        "contenu": "Que mettent les esquimaux qui vont à la plage ? De la crème polaire"
+    },
+    {
+        "titre": "",
+        "catégorie": " Blague informatique",
+        "restriction": false,
+        "contenu": "Que dit un informaticien quand il s'ennuie ? Je me fichier."
+    },
+    {
+        "titre": "",
+        "catégorie": "Blague scientifique",
+        "restriction": false,
+        "contenu": "Comment Archimède a trouvé π? En faisant ππ"
+    },
+    {
+        "titre": "",
+        "catégorie": "Blagues sur les animaux",
+        "restriction": false,
+        "contenu": "Quel est l’animal le plus frileux ? La caille !"
+    },
+    {
+        "titre": "",
+        "catégorie": "Blague scientifique",
+        "restriction": false,
+        "contenu": "Pourquoi les chercheurs ont-ils des trous de mémoire ? Parce qu’ils se creusent la tête"
+    },
+    {
+        "titre": "",
+        "catégorie": "Blague sur les français",
+        "restriction": false,
+        "contenu": "Pourquoi les français marchent sur les tuyaux d’arrosage ? Pour avoir de l’eau plate !"
+    },
+    {
+        "titre": "",
+        "catégorie": "Classique",
+        "restriction": false,
+        "contenu": "Qu’est ce qui n’est pas un steak ? Une pastèque"
+    },
+    {
+        "titre": "",
+        "catégorie": "Blague Carambar",
+        "restriction": false,
+        "contenu": "Avec quoi ramasse-t-on la papaye ? Avec une foufourche"
+    },
+    {
+        "titre": "",
+        "catégorie": "",
+        "restriction": false,
+        "contenu": "Vous connaissez l’histoire de l’armoire ? Elle n’est pas commode..."
+    },
+    {
+        "titre": "",
+        "catégorie": "Blagues sur les animaux",
+        "restriction": false,
+        "contenu": "Si un chat se fait écraser, il ne sera plus par minou "
+    },
+    {
+        "titre": "",
+        "catégorie": "Blagues sur les animaux",
+        "restriction": false,
+        "contenu": "Comment appelle-t-on deux canards qui se disputent ? Un conflit de canards."
+    },
+    {
+        "titre": "",
+        "catégorie": "Blague informatique",
+        "restriction": false,
+        "contenu": "Quelle est la déesse de l'internet ? L’ADSL. (La déesse L)"
+    },
+    {
+        "titre": "",
+        "catégorie": "Blague Carambar",
+        "restriction": false,
+        "contenu": "Deux toutous regardent la télévision : Tu as mis quelle chienne ? - « Canal puce ! »"
+    },
+    {
+        "titre": "",
+        "catégorie": "Classique",
+        "restriction": false,
+        "contenu": "Quel est le comble pour un joueur de bowling ? De perdre la boule !"
+    },
+    {
+        "titre": "",
+        "catégorie": "Jeux de mots",
+        "restriction": false,
+        "contenu": " Que dit un Cubain devant une vaisselle à faire : C'est sale ça!!"
+    },
+    {
+        "titre": "",
+        "catégorie": "Blague culinaire",
+        "restriction": false,
+        "contenu": "Que fait une fraise sur un cheval ? Tagada Tagada"
+    },
+    {
+        "titre": "",
+        "catégorie": "Blague culinaire",
+        "restriction": false,
+        "contenu": "Qu’est ce qu’un pépito le soir ?  Un pépitard"
+    },
+    {
+        "titre": "",
+        "catégorie": "Blague culinaire",
+        "restriction": false,
+        "contenu": "Que peut on cuisiner avec une baguette et une boussole ? Du pain perdu"
+    },
+    {
+        "titre": "",
+        "catégorie": "Monsieur et madame... qui ont un fils",
+        "restriction": false,
+        "contenu": "Monsieur et Madame Fèsse ont un fils. Comment s'appelle-t-il ? 'Malo'"
     }
+    ,
+    {
+        "titre": "",
+        "catégorie": "Monsieur et madame... qui ont un fils",
+        "restriction": false,
+        "contenu": "Monsieur et Madame Akaileur ont une fille. Comment s'appelle-t-elle ? 'Ondine'"
+    },
+    {
+        "titre": "",
+        "catégorie": "Blague sur les blondes",
+        "restriction": false,
+        "contenu": "Qu’est-ce qui est dur et long pour un blonde ? Penser…"
+    },
+    {
+        "titre": "",
+        "catégorie": "Blague sur les blondes",
+        "restriction": false,
+        "contenu": "Pourquoi les blondes frappent-elles le pain contre le mur ? – Pour casser la croûte !"
+    },
+    {
+        "titre": "",
+        "catégorie": "Blagues sur les animaux",
+        "restriction": false,
+        "contenu": "Une girafe qui rentre dans un bar, elle va boire un cou"
+    },
+    {
+        "titre": "",
+        "catégorie": "Blague sur les blondes",
+        "restriction": false,
+        "contenu": "Qu’est-ce qu’une blonde intelligente aux yeux bleus ? Un labrador"
+    },
+    {
+        "titre": "",
+        "catégorie": "Classique",
+        "restriction": false,
+        "contenu": "Quel est le comble pour une voyante ? De perdre la boule"
+    },
+    {
+        "titre": "",
+        "catégorie": "Blagues sur les animaux",
+        "restriction": false,
+        "contenu": "Que fait un crocodile quand il rencontre une superbe femelle ? Il Lacoste."
+    },
+    {
+        "titre": "",
+        "catégorie": "Classique",
+        "restriction": false,
+        "contenu": "Qu'est ce qu'un cadeau qui s'en va ? Une surprise party"
+    },
+    {
+        "titre": "",
+        "catégorie": "Classique",
+        "restriction": false,
+        "contenu": "Que dit-on d'une fleur qui a eu zéro à son contrôle ? Qu’elle s’est plantée."
+    },
+    {
+        "titre": "",
+        "catégorie": "",
+        "restriction": false,
+        "contenu": "Que se passe-t-il quand 2 poissons s'énervent ? Le thon monte."
+    },
+    {
+        "titre": "",
+        "catégorie": "Classique",
+        "restriction": false,
+        "contenu": "Qu'est ce qu'une carotte dans une flaque d'eau ? Un bonhomme de neige en été."
+    },
+    {
+        "titre": "",
+        "catégorie": "Classique",
+        "restriction": false,
+        "contenu": "Quel est l'arbre préféré des chômeurs ? Le bouleau."
+    },
+    {
+        "titre": "",
+        "catégorie": "Classique",
+        "restriction": false,
+        "contenu": "Qu’est ce qu’un homme armé dans un champs de blé ? Un céréale killer"
+    },
+    {
+        "titre": "",
+        "catégorie": "Humour noir",
+        "restriction": false,
+        "contenu": "C'est l'histoire d'un zoophile qui rentre dans un bar."
+    },
+    {
+        "titre": "",
+        "catégorie": "Classique",
+        "restriction": false,
+        "contenu": "Quelle est la viande préférée des Russes ? Le steak tsar tsar."
+    },
+    {
+        "titre": "",
+        "catégorie": "Classique",
+        "restriction": false,
+        "contenu": "Qu'est-ce qui est dur, blanc, avec le bout rouge, et qui sent la pisse ? Une borne kilométrique."
+    },
+    {
+        "titre": "",
+        "catégorie": "Blague sur les belges",
+        "restriction": false,
+        "contenu": "Pourquoi les Belges viennent-ils à la messe avec du savon ? Pour l’Ave Maria."
+    },
+    {
+        "titre": "",
+        "catégorie": "Classique",
+        "restriction": false,
+        "contenu": "Que fait un employé de chez Sephora à sa pause clope ? Il parfumer"
+    },
+    {
+        "titre": "",
+        "catégorie": "Jeux de mots",
+        "restriction": false,
+        "contenu": "Pourquoi tu vas toujours aux toilettes avec du pain ? C’est pour donner à manger aux Canards W-C."
+    },
+    {
+        "titre": "",
+        "catégorie": "Jeux de mots",
+        "restriction": false,
+        "contenu": "Bouh ! teille. Bouh ! illoire. Bouh ! tique"
+    }
+
 ]
