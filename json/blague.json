@@ -1,182 +1,122 @@
 [
     {
-        "titre": "",
-        "catégorie": "Blague sur les blondes",
-        "restriction": false,
-        "contenu": ""
+      "titre": "Plongeurs et bateaux",
+      "contenu": "Pourquoi les plongeurs plongent-ils toujours en arrière et jamais en avant ? Parce que sinon ils tombent dans le bateau !",
+      "categorie": "Classique",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": "Jeux de mots",
-        "restriction": false,
-        "contenu": ""
+      "titre": "Petit pois dans l'ascenseur",
+      "contenu": "Qu'est-ce qui est vert, qui monte et qui descend dans les champs ? Un petit pois dans un ascenseur !",
+      "categorie": "Classique",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": "Blague de Toto",
-        "restriction": false,
-        "contenu": ""
+      "titre": "Comment appelle-t-on un chien qui n'a pas de pattes ? On ne l'appelle pas, on va le chercher !",
+      "contenu": "Comment appelle-t-on un chien qui n'a pas de pattes ? On ne l'appelle pas, on va le chercher !",
+      "categorie": "Animaux",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": "Blague Carambar",
-        "restriction": false,
-        "contenu": ""
+      "titre": "Qu'est-ce qui est petit, jaune et qui court très vite ? Un citron pressé !",
+      "contenu": "Qu'est-ce qui est petit, jaune et qui court très vite ? Un citron pressé !",
+      "categorie": "Nourriture",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": "Blague raciste",
-        "restriction": true,
-        "contenu": ""
+      "titre": "Pourquoi les plongeurs plongent-ils toujours en arrière et jamais en avant ? Parce que sinon ils tombent dans le bateau !",
+      "contenu": "Pourquoi les plongeurs plongent-ils toujours en arrière et jamais en avant ? Parce que sinon ils tombent dans le bateau !",
+      "categorie": "Classique",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": "Blague noire",
-        "restriction": true,
-        "contenu": ""
+      "titre": "Poisson muet",
+      "contenu": "Pourquoi les poissons ne parlent-ils jamais ? Parce qu'ils ont peur de s'échouer sur les rives de l'humour !",
+      "categorie": "Animaux",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": "Blague sur les belges",
-        "restriction": false,
-        "contenu": ""
+      "titre": "Café froid",
+      "contenu": "Qu'est-ce qu'un café froid ? Un café tellement cool qu'il ne se lève jamais le matin !",
+      "categorie": "Nourriture",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": "Blague sur les français",
-        "restriction": false,
-        "contenu": ""
+      "titre": "Cheval détective",
+      "contenu": "Pourquoi le cheval a-t-il été engagé comme détective ? Parce qu'il était un véritable expert en enquêtes à \"neigh\" importe quel moment !",
+      "categorie": "Animaux",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": "Monsieur et madame... qui ont un fils",
-        "restriction": false,
-        "contenu": ""
+      "titre": "Téléphone en chocolat",
+      "contenu": "Qu'est-ce qu'un téléphone en chocolat ? Une tablette pleine de conversations sucrées !",
+      "categorie": "Nourriture",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": "Toc, toc, toc",
-        "restriction": false,
-        "contenu": ""
+      "titre": "Escargot impatient",
+      "contenu": "Pourquoi l'escargot a-t-il abandonné le transport en commun ? Parce qu'il ne pouvait plus supporter le rythme lent du bus !",
+      "categorie": "Animaux",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
+      "titre": "Gâteau déprimé",
+      "contenu": "Pourquoi le gâteau était-il si déprimé ? Parce qu'il était toujours en miettes !",
+      "categorie": "Nourriture",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": "Caricature",
-        "restriction": false,
-        "contenu": ""
+      "titre": "Ours polaire dans la jungle",
+      "contenu": "Pourquoi l'ours polaire ne va-t-il jamais dans la jungle ? Parce qu'il déteste quand ses amis lui disent qu'il est un ourson polaire oublié !",
+      "categorie": "Animaux",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": " Blague informatique",
-        "restriction": false,
-        "contenu": ""
+      "titre": "Chien et professeur",
+      "contenu": "Qu'est-ce qu'un chien qui enseigne les tours ? Un professeur-chien-d'œuvre !",
+      "categorie": "Animaux",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": "Blague scientifique",
-        "restriction": false,
-        "contenu": ""
+      "titre": "Chaise musicale",
+      "contenu": "Pourquoi les chaises ne jouent-elles jamais à la chaise musicale ? Parce qu'elles ont peur de s'asseoir sur quelqu'un !",
+      "categorie": "Classique",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
+      "titre": "Bananabot",
+      "contenu": "Qu'est-ce qu'un robot qui aime les fruits ? Un bananabot qui a une peau jaune et une intelligence artificielle !",
+      "categorie": "Technologie",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
+      "titre": "Poisson et guitare",
+      "contenu": "Pourquoi les poissons ne jouent-ils jamais de la guitare ? Parce qu'ils ont du mal à appuyer sur les cordes avec leurs nageoires !",
+      "categorie": "Animaux",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
+      "titre": "Poulet acrobate",
+      "contenu": "Qu'est-ce qu'un poulet acrobate ? Un vola-tourbillon qui fait des sauts périlleux dans le poulailler !",
+      "categorie": "Animaux",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
+      "titre": "Girafe et ascenseur",
+      "contenu": "Comment font les girafes pour entrer dans les ascenseurs ? Elles plient leur cou et se faufilent entre les portes !",
+      "categorie": "Animaux",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
+      "titre": "Chaise électrique",
+      "contenu": "Pourquoi la chaise électrique ne peut-elle pas devenir avocate ? Parce qu'elle est toujours en charge !",
+      "categorie": "Classique",
+      "restreint": false
     },
     {
-        "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
-    },
-    {
-        "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
-    },
-    {
-        "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
-    },
-    {
-        "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
-    },
-    {
-        "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
-    },
-    {
-        "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
-    },
-    {
-        "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
-    },
-    {
-        "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
-    },
-    {
-        "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
-    },
-    {
-        "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
-    },
-    {
-        "titre": "",
-        "catégorie": "",
-        "restriction": false,
-        "contenu": ""
+      "titre": "Chat architecte",
+      "contenu": "Qu'est-ce qu'un chat architecte ? Un félin qui conçoit des plans pour des griffes-tures impressionnantes !",
+      "categorie": "Animaux",
+      "restreint": false
     }
 ]
