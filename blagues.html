@@ -91,27 +91,27 @@
                   Quelque soit le contexte de consulter un site de blagues, toutes les raisons sont bonnes pour se changer les idées. 
                   Les blagues sont catégorisés afin de filtrer vos envies et vos besoins. 
                 </p>
-                <p class="mb-0">
-                  Ci-dessous se retrouvent comme catégorie: 
-                  <li>Classique</li>
-                  <li>Animaux</li>
-                  <li>Nourriture</li>
-                  <li>Blonde</li>
-                  <li>Nationalité</li>
-                  <li>Carambar</li>
-                  <li>Culinaire</li>
-                  <li>Technologie</li>
-                  <li>Jeux de mots</li>
-                  <li>Toto</li>
-                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <main class="mt-4">  
-    </main>
+    <main class="container">
+    <h1>Blagues</h1>
+
+    <div class="form-group">
+      <label for="categorieSelect">Catégorie :</label>
+      <select id="categorieSelect" class="form-control">
+        <option value="toutes" selected>Toutes</option>
+        <!-- Les options des catégories seront générées dynamiquement -->
+      </select>
+    </div>
+
+    <div id="blagues" class="mt-3"></div>
+
+    <ul id="pagination" class="pagination"></ul>
+  </main>
 
     <footer class="footer text-faded text-center py-5">
       <div class="container">
