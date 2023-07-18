@@ -21,6 +21,7 @@
     />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/blague.css" rel="stylesheet" />
   </head>
   <body>
     <header>
@@ -126,7 +127,7 @@
     <script src="./js/blagues.js"></script>
     <script>
       // Appel de la fonction pour afficher les blagues en passant le chemin du fichier JSON
-      afficherBlagues("./json/blague.json");
+      controleurBlagues.init();
     </script>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

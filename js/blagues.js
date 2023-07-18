@@ -5,17 +5,17 @@ const modeleBlagues = {
   donneesBlagues: [],
   ageUtilisateur: 0,
 
-  chargerBlagues: function(urlBlagues) {
+  chargerBlagues: function (urlBlagues) {
     return fetch(urlBlagues)
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         this.donneesBlagues = data;
       });
   },
 
-  getNombreBlaguesVisibles: function() {
+  getNombreBlaguesVisibles: function (listBlague) {
     let count = 0;
-    this.donneesBlagues.forEach(blague => {
+    listBlague.forEach((blague) => {
       if (!blague.restreint || (blague.restreint && this.estMajeur())) {
         count++;
       }
@@ -23,7 +23,7 @@ const modeleBlagues = {
     return count;
   },
 
-  estMajeur: function() {
+  estMajeur: function () {
     if (this.ageUtilisateur === 0) {
       return false;
     }
@@ -33,121 +33,214 @@ const modeleBlagues = {
     return false;
   },
 
-  passerALaPageSuivante: function() {
-    if (this.pageCourante < Math.ceil(this.getNombreBlaguesVisibles() / this.blaguesParPage)) {
+  passerALaPageSuivante: function () {
+    if (
+      this.pageCourante <
+      Math.ceil(this.getNombreBlaguesVisibles() / this.blaguesParPage)
+    ) {
       this.pageCourante++;
     }
   },
 
-  passerALaPagePrecedente: function() {
+  passerALaPagePrecedente: function () {
     if (this.pageCourante > 1) {
       this.pageCourante--;
     }
-  }
+  },
 };
 
 // Vue (View)
 const vueBlagues = {
-  afficherBlagues: function(blagues) {
-    const conteneurBlagues = document.getElementById('blagues');
-    conteneurBlagues.innerHTML = '';
+  afficherBlagues: function (blagues) {
+    const conteneurBlagues = document.getElementById("blagues");
+    conteneurBlagues.innerHTML = "";
 
-    blagues.forEach(blague => {
+    blagues.forEach((blague) => {
       const carteBlague = this.creerCarteBlague(blague);
       conteneurBlagues.appendChild(carteBlague);
     });
   },
 
-  creerCarteBlague: function(blague) {
+  creerCarteBlague: function (blague) {
     const { titre, contenu, categorie } = blague;
 
     const carteHtml = `
-      <div class="carte mb-3">
-        <div class="carte-corps">
-          <h5 class="carte-titre">${titre}</h5>
-          <p class="carte-texte">${contenu}</p>
-          <p class="carte-texte text-muted">Catégorie: ${categorie}</p>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">${titre}</h5>
+          <p class="card-text">${contenu}</p>
+          <p class="card-text text-muted">Catégorie: ${categorie}</p>
         </div>
       </div>
     `;
 
-    const elementCarte = document.createElement('div');
+    const elementCarte = document.createElement("div");
     elementCarte.innerHTML = carteHtml.trim();
 
     return elementCarte.firstChild;
   },
 
-  afficherPagination: function(totalPages) {
-    const conteneurPagination = document.getElementById('pagination');
-    conteneurPagination.innerHTML = '';
+  afficherPagination: function (totalPages) {
+    const conteneurPagination = document.getElementById("pagination");
+    conteneurPagination.innerHTML = "";
 
     if (totalPages <= 1) {
       return;
     }
 
-    const elementPagePrecedente = this.creerElementPagination('Précédent', 'element-page', 'precedent');
+    const elementPagePrecedente = this.creerElementPagination(
+      "Précédent",
+      "element-page",
+      "precedent"
+    );
     conteneurPagination.appendChild(elementPagePrecedente);
 
     for (let page = 1; page <= totalPages; page++) {
-      const elementPage = this.creerElementPagination(page, 'element-page');
+      const elementPage = this.creerElementPagination(page, "element-page");
       if (page === modeleBlagues.pageCourante) {
-        elementPage.classList.add('actif');
+        elementPage.classList.add("actif");
       }
       conteneurPagination.appendChild(elementPage);
     }
 
-    const elementPageSuivante = this.creerElementPagination('Suivant', 'element-page', 'suivant');
+    const elementPageSuivante = this.creerElementPagination(
+      "Suivant",
+      "element-page",
+      "suivant"
+    );
     conteneurPagination.appendChild(elementPageSuivante);
   },
 
-  creerElementPagination: function(texte, classeCss, pageCible = null) {
-    const elementListe = document.createElement('li');
+  creerElementPagination: function (texte, classeCss, pageCible = null) {
+    const elementListe = document.createElement("li");
     elementListe.classList.add(classeCss);
-    const lien = document.createElement('a');
-    lien.classList.add('lien-page');
-    lien.href = '#';
+    const lien = document.createElement("a");
+    lien.classList.add("lien-page");
+    lien.href = "#";
     lien.textContent = texte;
     elementListe.appendChild(lien);
 
     if (pageCible) {
-      elementListe.addEventListener('click', () => {
+      elementListe.addEventListener("click", () => {
         controleurBlagues.gererClicElementPagination(pageCible);
       });
     }
 
     return elementListe;
-  }
+  },
+
+  mettreAJourBoutonsNavigation: function() {
+    const boutonPrecedent = document.getElementById('boutonPrecedent');
+    const boutonSuivant = document.getElementById('boutonSuivant');
+
+    if (modeleBlagues.pageCourante === 1) {
+      boutonPrecedent.disabled = true;
+    } else {
+      boutonPrecedent.disabled = false;
+    }
+
+    if (modeleBlagues.pageCourante === Math.ceil(modeleBlagues.getNombreBlaguesVisibles() / modeleBlagues.blaguesParPage)) {
+      boutonSuivant.disabled = true;
+    } else {
+      boutonSuivant.disabled = false;
+    }
+  },
+
+  afficherBlaguesEtPagination: function (blaguesFiltre) {
+    const startIndex =
+      (modeleBlagues.pageCourante - 1) * modeleBlagues.blaguesParPage;
+    const endIndex = startIndex + modeleBlagues.blaguesParPage;
+    const listBlague =  blaguesFiltre === undefined ? modeleBlagues.donneesBlagues : blaguesFiltre;
+    const blagues = listBlague.slice(startIndex, endIndex);
+
+    console.log(listBlague.length);
+    vueBlagues.afficherBlagues(blagues);
+    const totalPages = Math.ceil(
+      modeleBlagues.getNombreBlaguesVisibles(listBlague) / modeleBlagues.blaguesParPage
+    );
+    vueBlagues.afficherPagination(totalPages);
+    this.mettreAJourBoutonsNavigation();
+  },
+
+  afficherOptionsCategories: function () {
+    const categories = controleurBlagues.recupererCategories();
+    const selectElement = document.getElementById("categorieSelect");
+    selectElement.innerHTML = "";
+
+    categories.forEach((categorie) => {
+      const optionElement = document.createElement("option"); 
+      optionElement.value = categorie;
+      optionElement.textContent = categorie;
+      selectElement.appendChild(optionElement);
+    });
+  },
 };
 
 // Contrôleur (Controller)
 const controleurBlagues = {
-  init: function() {
-    const urlBlagues = 'chemin/vers/votre/fichier.json'; // Remplacez par le chemin de votre fichier JSON
+  init: function () {
+    const urlBlagues = "./json/blague.json"; // Remplacez par le chemin de votre fichier JSON
 
-    modeleBlagues.chargerBlagues(urlBlagues)
+    document.getElementById('categorieSelect').addEventListener('change', () => {
+      this.filtrerBlaguesParCategorie();
+    });
+
+    modeleBlagues
+      .chargerBlagues(urlBlagues)
       .then(() => {
-        this.afficherBlaguesEtPagination();
+        vueBlagues.afficherOptionsCategories();
+        vueBlagues.afficherBlaguesEtPagination();
       })
-      .catch(error => {
-        console.error('Une erreur s\'est produite lors du chargement des blagues :', error);
+      .catch((error) => {
+        console.error(
+          "Une erreur s'est produite lors du chargement des blagues :",
+          error
+        );
       });
   },
 
-  afficherBlaguesEtPagination: function() {
-    const startIndex = (modeleBlagues.pageCourante - 1) * modeleBlagues.blaguesParPage;
-    const endIndex = startIndex + modeleBlagues.blaguesParPage;
-    const blagues = modeleBlagues.donneesBlagues.slice(startIndex, endIndex);
+  filtrerBlaguesParCategorie: function () {
+    const selectElement = document.getElementById("categorieSelect");
+    const categorieSelectionnee = selectElement.value;
+    const blaguesFiltrees = modeleBlagues.donneesBlagues.filter((blague) => {
+      if (categorieSelectionnee === "toutes") {
+        return (
+          !blague.restreint || (blague.restreint && modeleBlagues.estMajeur())
+        );
+      } else {
+        return (
+          (!blague.restreint ||
+            (blague.restreint && modeleBlagues.estMajeur())) &&
+          blague.categorie === categorieSelectionnee
+        );
+      }
+    });
 
-    vueBlagues.afficherBlagues(blagues);
-
-    const totalPages = Math.ceil(modeleBlagues.getNombreBlaguesVisibles() / modeleBlagues.blaguesParPage);
-    vueBlagues.afficherPagination(totalPages);
-
-    this.mettreAJourBoutonsNavigation();
+    modeleBlagues.pageCourante = 1; // Réinitialise la page courante après le filtrage
+    vueBlagues.afficherBlaguesEtPagination(blaguesFiltrees);
   },
+
+  recupererCategories: function () {
+    const categories = ["toutes"];
+    modeleBlagues.donneesBlagues.forEach((blague) => {
+      if (blague.categorie && !categories.includes(blague.categorie)) {
+        categories.push(blague.categorie);
+      }
+    });
+    return categories;
+  },
+
+  
 
   gererClicElementPagination: function(pageCible) {
     if (pageCible === 'precedent') {
       modeleBlagues.passerALaPagePrecedente();
     } else if (pageCible === 'suivant') {
-      modeleBlagues.passerALaPageSuiv
+      modeleBlagues.passerALaPageSuivante();
+    } else {
+      modeleBlagues.pageCourante = pageCible;
+    }
+
+    vueBlagues.afficherBlaguesEtPagination();
+  },
+};
