@@ -3,6 +3,7 @@ const modeleBlagues = {
   blaguesParPage: 5,
   pageCourante: 1,
   donneesBlagues: [],
+  donneesBlaguesFiltre: [],
   ageUtilisateur: 0,
 
   chargerBlagues: function (urlBlagues) {
@@ -10,16 +11,18 @@ const modeleBlagues = {
       .then((response) => response.json())
       .then((data) => {
         this.donneesBlagues = data;
+        this.donneesBlaguesFiltre = this.donneesBlagues
       });
   },
 
-  getNombreBlaguesVisibles: function (listBlague) {
+  getNombreBlaguesVisibles: function () {
     let count = 0;
-    listBlague.forEach((blague) => {
+    this.donneesBlaguesFiltre.forEach((blague) => {
       if (!blague.restreint || (blague.restreint && this.estMajeur())) {
         count++;
       }
     });
+    console.log(count);
     return count;
   },
 
@@ -34,6 +37,7 @@ const modeleBlagues = {
   },
 
   passerALaPageSuivante: function () {
+    console.log(this.pageCourante);
     if (
       this.pageCourante <
       Math.ceil(this.getNombreBlaguesVisibles() / this.blaguesParPage)
@@ -81,22 +85,25 @@ const vueBlagues = {
   },
 
   afficherPagination: function (totalPages) {
-    const conteneurPagination = document.getElementById("pagination");
+    const conteneurPagination = document.getElementById('pagination');
     conteneurPagination.innerHTML = "";
+
+    const conteneurPaginationTexte = document.getElementById('paginationText');
+    conteneurPaginationTexte.textContent = `Page ${modeleBlagues.pageCourante}/${totalPages}`;
 
     if (totalPages <= 1) {
       return;
     }
-
     const elementPagePrecedente = this.creerElementPagination(
       "Précédent",
       "element-page",
       "precedent"
     );
+    elementPagePrecedente.children[0].id = "boutonPrecedent";
     conteneurPagination.appendChild(elementPagePrecedente);
-
+    console.log("test3");
     for (let page = 1; page <= totalPages; page++) {
-      const elementPage = this.creerElementPagination(page, "element-page");
+      const elementPage = this.creerElementPagination(page, "element-page", page);
       if (page === modeleBlagues.pageCourante) {
         elementPage.classList.add("actif");
       }
@@ -108,7 +115,9 @@ const vueBlagues = {
       "element-page",
       "suivant"
     );
+    elementPageSuivante.children[0].id = "boutonSuivant";
     conteneurPagination.appendChild(elementPageSuivante);
+    
   },
 
   creerElementPagination: function (texte, classeCss, pageCible = null) {
@@ -116,12 +125,18 @@ const vueBlagues = {
     elementListe.classList.add(classeCss);
     const lien = document.createElement("a");
     lien.classList.add("lien-page");
-    lien.href = "#";
+    lien.href = "#pagination";
     lien.textContent = texte;
     elementListe.appendChild(lien);
 
-    if (pageCible) {
-      elementListe.addEventListener("click", () => {
+    if (pageCible === 'precedent' || pageCible === 'suivant') {
+      lien.addEventListener('click', (event) => {
+        event.preventDefault();
+        controleurBlagues.gererClicElementPagination(pageCible);
+      });
+    } else {
+      lien.addEventListener('click', () => {
+        console.log("test4", pageCible);
         controleurBlagues.gererClicElementPagination(pageCible);
       });
     }
@@ -132,7 +147,8 @@ const vueBlagues = {
   mettreAJourBoutonsNavigation: function() {
     const boutonPrecedent = document.getElementById('boutonPrecedent');
     const boutonSuivant = document.getElementById('boutonSuivant');
-
+    console.log(modeleBlagues.pageCourante);
+    /*
     if (modeleBlagues.pageCourante === 1) {
       boutonPrecedent.disabled = true;
     } else {
@@ -144,22 +160,21 @@ const vueBlagues = {
     } else {
       boutonSuivant.disabled = false;
     }
+    */
   },
 
   afficherBlaguesEtPagination: function (blaguesFiltre) {
     const startIndex =
       (modeleBlagues.pageCourante - 1) * modeleBlagues.blaguesParPage;
     const endIndex = startIndex + modeleBlagues.blaguesParPage;
-    const listBlague =  blaguesFiltre === undefined ? modeleBlagues.donneesBlagues : blaguesFiltre;
-    const blagues = listBlague.slice(startIndex, endIndex);
-
-    console.log(listBlague.length);
+    modeleBlagues.blaguesFiltrees =  blaguesFiltre === undefined ? modeleBlagues.donneesBlagues : blaguesFiltre;
+    const blagues = modeleBlagues.blaguesFiltrees.slice(startIndex, endIndex);
     vueBlagues.afficherBlagues(blagues);
     const totalPages = Math.ceil(
-      modeleBlagues.getNombreBlaguesVisibles(listBlague) / modeleBlagues.blaguesParPage
+      modeleBlagues.getNombreBlaguesVisibles() / modeleBlagues.blaguesParPage
     );
     vueBlagues.afficherPagination(totalPages);
-    this.mettreAJourBoutonsNavigation();
+    vueBlagues.mettreAJourBoutonsNavigation();
   },
 
   afficherOptionsCategories: function () {
