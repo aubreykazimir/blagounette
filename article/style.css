@@ -12612,3 +12612,15 @@ fieldset:disabled .btn {
   .shop1{
     height:100%;
   }
+
+  .shop2{
+    height: 50%;
+  }
+
+  .card{
+    color: #000;
+  }
+
+  .card-group{
+    height: 100%;
+  }
