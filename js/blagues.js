@@ -11,7 +11,7 @@ const modeleBlagues = {
       .then((response) => response.json())
       .then((data) => {
         this.donneesBlagues = data;
-        this.donneesBlaguesFiltre = this.donneesBlagues
+        this.donneesBlaguesFiltre = this.donneesBlagues;
       });
   },
 
@@ -85,10 +85,10 @@ const vueBlagues = {
   },
 
   afficherPagination: function (totalPages) {
-    const conteneurPagination = document.getElementById('pagination');
+    const conteneurPagination = document.getElementById("pagination");
     conteneurPagination.innerHTML = "";
 
-    const conteneurPaginationTexte = document.getElementById('paginationText');
+    const conteneurPaginationTexte = document.getElementById("paginationText");
     conteneurPaginationTexte.textContent = `Page ${modeleBlagues.pageCourante}/${totalPages}`;
 
     if (totalPages <= 1) {
@@ -103,7 +103,11 @@ const vueBlagues = {
     conteneurPagination.appendChild(elementPagePrecedente);
     console.log("test3");
     for (let page = 1; page <= totalPages; page++) {
-      const elementPage = this.creerElementPagination(page, "element-page", page);
+      const elementPage = this.creerElementPagination(
+        page,
+        "element-page",
+        page
+      );
       if (page === modeleBlagues.pageCourante) {
         elementPage.classList.add("actif");
       }
@@ -117,26 +121,29 @@ const vueBlagues = {
     );
     elementPageSuivante.children[0].id = "boutonSuivant";
     conteneurPagination.appendChild(elementPageSuivante);
-    
   },
 
   creerElementPagination: function (texte, classeCss, pageCible = null) {
     const elementListe = document.createElement("li");
     elementListe.classList.add(classeCss);
+
+    // Utilisation d'un seul élément <a> pour tout l'élément <li>
     const lien = document.createElement("a");
     lien.classList.add("lien-page");
     lien.href = "#pagination";
-    lien.textContent = texte;
     elementListe.appendChild(lien);
 
-    if (pageCible === 'precedent' || pageCible === 'suivant') {
-      lien.addEventListener('click', (event) => {
-        event.preventDefault();
-        controleurBlagues.gererClicElementPagination(pageCible);
-      });
+    // Utilisation de l'icône de Font Awesome
+    if (pageCible === "precedent") {
+      lien.innerHTML = '<i class="fas fa-chevron-left">Précédent</i>';
+    } else if (pageCible === "suivant") {
+      lien.innerHTML = '<i class="fas fa-chevron-right"1>Suivant</i>';
     } else {
-      lien.addEventListener('click', () => {
-        console.log("test4", pageCible);
+      lien.textContent = texte;
+    }
+
+    if (pageCible) {
+      elementListe.addEventListener("click", () => {
         controleurBlagues.gererClicElementPagination(pageCible);
       });
     }
@@ -144,9 +151,9 @@ const vueBlagues = {
     return elementListe;
   },
 
-  mettreAJourBoutonsNavigation: function() {
-    const boutonPrecedent = document.getElementById('boutonPrecedent');
-    const boutonSuivant = document.getElementById('boutonSuivant');
+  mettreAJourBoutonsNavigation: function () {
+    const boutonPrecedent = document.getElementById("boutonPrecedent");
+    const boutonSuivant = document.getElementById("boutonSuivant");
     console.log(modeleBlagues.pageCourante);
     /*
     if (modeleBlagues.pageCourante === 1) {
@@ -167,7 +174,10 @@ const vueBlagues = {
     const startIndex =
       (modeleBlagues.pageCourante - 1) * modeleBlagues.blaguesParPage;
     const endIndex = startIndex + modeleBlagues.blaguesParPage;
-    modeleBlagues.blaguesFiltrees =  blaguesFiltre === undefined ? modeleBlagues.donneesBlagues : blaguesFiltre;
+    modeleBlagues.blaguesFiltrees =
+      blaguesFiltre === undefined
+        ? modeleBlagues.donneesBlagues
+        : blaguesFiltre;
     const blagues = modeleBlagues.blaguesFiltrees.slice(startIndex, endIndex);
     vueBlagues.afficherBlagues(blagues);
     const totalPages = Math.ceil(
@@ -183,7 +193,7 @@ const vueBlagues = {
     selectElement.innerHTML = "";
 
     categories.forEach((categorie) => {
-      const optionElement = document.createElement("option"); 
+      const optionElement = document.createElement("option");
       optionElement.value = categorie;
       optionElement.textContent = categorie;
       selectElement.appendChild(optionElement);
@@ -196,9 +206,11 @@ const controleurBlagues = {
   init: function () {
     const urlBlagues = "./json/blague.json"; // Remplacez par le chemin de votre fichier JSON
 
-    document.getElementById('categorieSelect').addEventListener('change', () => {
-      this.filtrerBlaguesParCategorie();
-    });
+    document
+      .getElementById("categorieSelect")
+      .addEventListener("change", () => {
+        this.filtrerBlaguesParCategorie();
+      });
 
     modeleBlagues
       .chargerBlagues(urlBlagues)
@@ -245,12 +257,10 @@ const controleurBlagues = {
     return categories;
   },
 
-  
-
-  gererClicElementPagination: function(pageCible) {
-    if (pageCible === 'precedent') {
+  gererClicElementPagination: function (pageCible) {
+    if (pageCible === "precedent") {
       modeleBlagues.passerALaPagePrecedente();
-    } else if (pageCible === 'suivant') {
+    } else if (pageCible === "suivant") {
       modeleBlagues.passerALaPageSuivante();
     } else {
       modeleBlagues.pageCourante = pageCible;
