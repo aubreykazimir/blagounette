@@ -18,7 +18,7 @@
 }
 
 #catecolor{
-  color: white;
+  color: rgb(235, 155, 155);
 }
 
 /* Masque le texte de pagination sur les écrans plus petits que md */
@@ -44,3 +44,12 @@
     margin-top: 20px;
   }
 }
+#colorBlague{
+  color: rgb(38, 0, 253);
+  background-color: rgb(170, 144, 105);
+}
+
+#colorTitle{
+  color: rgb(0, 0, 0);
+}
+

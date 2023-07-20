@@ -70,8 +70,8 @@ const vueBlagues = {
 
     const carteHtml = `
       <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">${titre}</h5>
+        <div class="card-body" id="colorBlague">
+          <h5 class="card-title" id="colorTitle">${titre}</h5>
           <p class="card-text">${contenu}</p>
           <p class="card-text text-muted">Catégorie: ${categorie}</p>
         </div>
