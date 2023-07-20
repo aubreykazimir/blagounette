@@ -21,29 +21,12 @@
   color: rgb(235, 155, 155);
 }
 
-/* Masque le texte de pagination sur les écrans plus petits que md */
-@media (max-width: 767.98px) {
-  #paginationText {
-    display: inline-block;
-  }
-
-  #pagination {
-    display: none;
-  }
+#pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-/* Affiche le texte de pagination sur les écrans plus grands que md */
-@media (min-width: 768px) {
-  #paginationText {
-    display: none;
-  }
-
-  #pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-}
 #colorBlague{
   color: rgb(38, 0, 253);
   background-color: rgb(170, 144, 105);

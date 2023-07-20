@@ -22,7 +22,6 @@ const modeleBlagues = {
         count++;
       }
     });
-    console.log(count);
     return count;
   },
 
@@ -37,7 +36,6 @@ const modeleBlagues = {
   },
 
   passerALaPageSuivante: function () {
-    console.log(this.pageCourante);
     if (
       this.pageCourante <
       Math.ceil(this.getNombreBlaguesVisibles() / this.blaguesParPage)
@@ -88,31 +86,16 @@ const vueBlagues = {
     const conteneurPagination = document.getElementById("pagination");
     conteneurPagination.innerHTML = "";
 
-    const conteneurPaginationTexte = document.getElementById("paginationText");
-    conteneurPaginationTexte.textContent = `Page ${modeleBlagues.pageCourante}/${totalPages}`;
-
     if (totalPages <= 1) {
       return;
     }
+    
     const elementPagePrecedente = this.creerElementPagination(
       "Précédent",
       "element-page",
       "precedent"
     );
     elementPagePrecedente.children[0].id = "boutonPrecedent";
-    conteneurPagination.appendChild(elementPagePrecedente);
-    console.log("test3");
-    for (let page = 1; page <= totalPages; page++) {
-      const elementPage = this.creerElementPagination(
-        page,
-        "element-page",
-        page
-      );
-      if (page === modeleBlagues.pageCourante) {
-        elementPage.classList.add("actif");
-      }
-      conteneurPagination.appendChild(elementPage);
-    }
 
     const elementPageSuivante = this.creerElementPagination(
       "Suivant",
@@ -120,6 +103,27 @@ const vueBlagues = {
       "suivant"
     );
     elementPageSuivante.children[0].id = "boutonSuivant";
+
+    conteneurPagination.appendChild(elementPagePrecedente);
+    // min-width: 768px
+    if(screen.width >= 768){
+      for (let page = 1; page <= totalPages; page++) {
+        const elementPage = this.creerElementPagination(
+          page,
+          "element-page",
+          page
+        );
+        if (page === modeleBlagues.pageCourante) {
+          elementPage.classList.add("actif");
+        }
+        conteneurPagination.appendChild(elementPage);
+      }
+    } else {
+      const element = this.creerElementPagination(`Page ${modeleBlagues.pageCourante}/${totalPages}`, "element-page");
+      conteneurPagination.appendChild(element);
+    }
+
+    
     conteneurPagination.appendChild(elementPageSuivante);
   },
 
@@ -137,7 +141,7 @@ const vueBlagues = {
     if (pageCible === "precedent") {
       lien.innerHTML = '<i class="fas fa-chevron-left">Précédent</i>';
     } else if (pageCible === "suivant") {
-      lien.innerHTML = '<i class="fas fa-chevron-right"1>Suivant</i>';
+      lien.innerHTML = '<i class="fas fa-chevron-right">Suivant</i>';
     } else {
       lien.textContent = texte;
     }
@@ -154,8 +158,6 @@ const vueBlagues = {
   mettreAJourBoutonsNavigation: function () {
     const boutonPrecedent = document.getElementById("boutonPrecedent");
     const boutonSuivant = document.getElementById("boutonSuivant");
-    console.log(modeleBlagues.pageCourante);
-    /*
     if (modeleBlagues.pageCourante === 1) {
       boutonPrecedent.disabled = true;
     } else {
@@ -167,7 +169,6 @@ const vueBlagues = {
     } else {
       boutonSuivant.disabled = false;
     }
-    */
   },
 
   afficherBlaguesEtPagination: function (blaguesFiltre) {
@@ -269,3 +270,7 @@ const controleurBlagues = {
     vueBlagues.afficherBlaguesEtPagination();
   },
 };
+
+window.addEventListener("resize", (event) => {
+  vueBlagues.afficherBlaguesEtPagination(modeleBlagues.donneesBlaguesFiltre);
+})
