@@ -368,10 +368,10 @@
         "contenu": "Qu’est ce qu’un homme armé dans un champs de blé ? Un céréale killer"
     },
     {
-        "titre": "Aie, le bar",
-        "categorie": "Humour noir",
-        "restreint": true,
-        "contenu": "C'est l'histoire d'un zoophile qui rentre dans un bar."
+        "titre": "Maladie féline",
+        "categorie": "Animaux",
+        "restreint": false,
+        "contenu": "C’est un chat qui va à la pharmacie et demande : « Je pourrais avoir un sirop pour ma toux ?»"
     },
     {
         "titre": "Russes",
